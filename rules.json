@@ -1,0 +1,22 @@
+[
+  {
+    "if": { "and": ["ho", "sốt"] },
+    "then": "cảm cúm"
+  },
+  {
+    "if": { "and": ["ho", "sốt", "khó thở"] },
+    "then": "viêm hô hấp"
+  },
+  {
+    "if": "cảm cúm",
+    "then": "uống thuốc"
+  },
+  {
+    "if": "viêm hô hấp",
+    "then": "đi khám" 
+  },
+  {
+    "if": { "or": ["đau đầu", "sốt"] },
+    "then": "cảm cúm"
+  }
+]
