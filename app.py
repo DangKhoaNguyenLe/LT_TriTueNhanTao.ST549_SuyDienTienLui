@@ -60,8 +60,13 @@ def submit():
     data = request.get_json()
     text = data.get("data", "")
     kq = suyLuan(text)
+<<<<<<< HEAD
     #g = f"Câu hỏi của người dùng la {text} và câu trả lời của hệ thống {kq}.chuyển câu trả lời làm sao cho mạch lạc hơn giữ nguyên ý nghĩa câu trả lời của hệ thống. Không thêm cái gì cả"
    # gemini = GeminiAPI.gemini_model.generate_content(g)
+=======
+    g = f"Câu hỏi của người dùng la {text} và câu trả lời của hệ thống {kq}.chuyển câu trả lời làm sao cho mạch lạc hơn giữ nguyên ý nghĩa câu trả lời của hệ thống. Không thêm cái gì cả"
+    gemini = GeminiAPI.gemini_model.generate_content(g)
+>>>>>>> 0805f202729ff6056e6ee02b563102ebffece1f4
     if kq is not None: 
         return f"{kq}"
     return f"Câu của bạn không có trong tập luật"
