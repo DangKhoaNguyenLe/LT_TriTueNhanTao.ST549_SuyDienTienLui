@@ -1,27 +1,32 @@
 
 def suyDienTien(DuKien, rules):
-    ds_DuKien= set(DuKien)
-    DuKien_Check = True
-    
-    while DuKien_Check:
-        DuKien_Check = False
-        
-        for rule in rules:
-            if rule["then"] not in ds_DuKien:
-                dsDieuKien = rule["if"]   
-                if check_DieuKienSDT(dsDieuKien, ds_DuKien):
-                    ds_DuKien.add(rule["then"])
-                    DuKien_Check = True
+    ds_DuKien = list(DuKien)  
+    luatDaSuDung = set()             
+    chechLuatMoi = True
 
+    while chechLuatMoi:
+        chechLuatMoi = False
+        for i, rule in enumerate(rules):
+            if i in luatDaSuDung:
+                continue
+            if check_DieuKien(rule["if"], ds_DuKien):
+                if rule["then"] not in ds_DuKien:
+                    ds_DuKien.append(rule["then"])  
+                    chechLuatMoi = True
+                luatDaSuDung.add(i)
     return ds_DuKien
 
-def check_DieuKienSDT(DieuKien, ds_DuKien):
+def check_DieuKien(DieuKien, ds_DuKien):
+    ds_lower = [d.lower() if isinstance(d, str) else d for d in ds_DuKien]
+
     if isinstance(DieuKien, str):
-        return DieuKien in ds_DuKien
+        return DieuKien.lower() in ds_lower
+
     if isinstance(DieuKien, dict):
         if "and" in DieuKien:
-            return all(c in ds_DuKien for c in DieuKien["and"])
+            return all(c.lower() in ds_lower for c in DieuKien["and"])
         if "or" in DieuKien:
-            return any(c in ds_DuKien for c in DieuKien["or"])
+            return any(c.lower() in ds_lower for c in DieuKien["or"])
             
     return False
+

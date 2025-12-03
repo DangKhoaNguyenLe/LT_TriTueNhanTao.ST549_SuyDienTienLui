@@ -15,29 +15,40 @@ def suyLuan(text):
     DuKien, Dich = chuyenDoi.chuyenDoi(text)
     DuKienBanDau = list(DuKien) 
     if not DuKien and not Dich:
-        return "Hệ thống: Xin lỗi, tôi không hiểu ý bạn."
+        return "Xin lỗi, tôi không hiểu ý bạn."
             
     if Dich:
         result = suyDienLui.suyDienLui(Dich, DuKienBanDau, rules)
         
         if result:
-            return f"ĐÚNG. Dựa trên các triệu chứng, bạn {Dich.replace('_', ' ')}."
+            return f"Đúng rồi. {DuKien[0]} {Dich}."
         
         else:
-            return f"KHÔNG. Tôi không thể chứng minh '{Dich.replace('_', ' ')}' từ các triệu chứng bạn cung cấp."
+            t = ""
+            for i in DuKien:
+                if len(DuKien) > 1 and t != "": t += ", "
+                t += i
+            return f"{t} không do {Dich}."
 
     elif DuKien:
-        dsDieuKien = suyDienTien.suyDienTien(DuKienBanDau, rules)
-        dieuKienMoi = dsDieuKien - set(DuKienBanDau)
-        
-        if dieuKienMoi:
-            kl = "Kết quả:\n"
-            for dkm in dieuKienMoi:
-                kl += f"{dkm},\n" 
-            return kl.strip()
+        kqSuyDien = suyDienTien.suyDienTien(DuKienBanDau, rules)
+        kqSuyDien = kqSuyDien[1:] if len(kqSuyDien) > 1 else []
+        if kqSuyDien:
+            kl = ""
+            for dkm in kqSuyDien:
+                # if len(kqSuyDien) > 1 and kl != "": kl += "."
+                kl += f"{dkm}\n" 
+            return kl
         else:
-            return "Không có trong tập luật"
+            return "Không thể suy luận ra được"
         
+def dinhDang(text):
+    search_string = "* "
+    replace_string = "<br>"
+    regex_pattern = r'\*\*([^\*]+)\*\*'
+    replacement_string = r'<b>\1</b>'
+    text = text.replace(search_string, replace_string)
+    return re.sub(regex_pattern, replacement_string, text)
 
 @app.route("/")
 def home():
@@ -49,10 +60,10 @@ def submit():
     data = request.get_json()
     text = data.get("data", "")
     kq = suyLuan(text)
-    g = f"Câu hỏi của người dùng la {text} và câu trả lời của hệ thống {kq}.chuyển câu trả lời làm sao cho mạch lạc hơn giữ nguyên ý nghĩa câu trả lời hệ thống"
-    gemini = GeminiAPI.gemini_model.generate_content(g)
+    #g = f"Câu hỏi của người dùng la {text} và câu trả lời của hệ thống {kq}.chuyển câu trả lời làm sao cho mạch lạc hơn giữ nguyên ý nghĩa câu trả lời của hệ thống. Không thêm cái gì cả"
+   # gemini = GeminiAPI.gemini_model.generate_content(g)
     if kq is not None: 
-        return f"{gemini.text}"
+        return f"{kq}"
     return f"Câu của bạn không có trong tập luật"
 
 

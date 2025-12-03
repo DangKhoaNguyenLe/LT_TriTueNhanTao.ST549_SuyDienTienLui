@@ -1,22 +1,211 @@
 [
   {
-    "if": { "and": ["ho", "sốt"] },
-    "then": "cảm cúm"
+    "if": {"or": ["Trí tuệ nhân tạo", "artificial tntelligence"] } ,
+    "then": "Là khoa học và kỹ thuật nhằm tạo ra các máy thông minh, đặc biệt là chương trình thông minh"
   },
   {
-    "if": { "and": ["ho", "sốt", "khó thở"] },
-    "then": "viêm hô hấp"
+    "if": "Trí tuệ nhân tạo tạo ra" ,
+    "then": "Máy tính thông minh, Robot được kiểm soát bằng máy tính, Phần mềm suy nghĩ thông minh"
   },
   {
-    "if": "cảm cúm",
-    "then": "uống thuốc"
+    "if": "Trí tuệ nhân tạo dựa trên" ,
+    "then": "cách hoạt động não bộ của con người: suy nghĩ, học hỏi, quyết định, giải quyết vấn đề"
   },
   {
-    "if": "viêm hô hấp",
-    "then": "đi khám" 
+    "if": "Mục tiêu của Trí tuệ nhân tạo" ,
+    "then": "Tạo hệ chuyên gia (Expert System)"
   },
   {
-    "if": { "or": ["đau đầu", "sốt"] },
-    "then": "cảm cúm"
+    "if": {"and": ["Tạo hệ chuyên gia (Expert System)", "Mục tiêu của Trí tuệ nhân tạo"] } ,
+    "then": "Tạo hệ thống thể hiện hành vi thông minh, học hỏi giải thích chứng minh trình bày và khuyên người sử dụng."
+  },
+  {
+    "if": "Mục tiêu của Trí tuệ nhân tạo" ,
+    "then": "Thực thi sự thông minh của con người vào máy"
+  },
+  {
+    "if": {"and": ["Thực thi sự thông minh của con người vào máy", "Mục tiêu của Trí tuệ nhân tạo"] } ,
+    "then": "Tạo hệ thống có khả năng hiểu suy nghĩ, học hỏi, hành động giống con người."
+  },
+  {
+    "if": "Nền tảng của Trí tuệ nhân tạo" ,
+    "then": "Trí tuệ nhân tạo là một ngành khoa học và công nghệ dựa trên: Khoa học máy tính, sinh học, tâm lý học, ngôn ngữ học, toán học và kỹ thuật"
+  },
+  {
+     "if": "Tính chất của tri thức" ,
+    "then": "Có dung lượng khổng lồ, Không được tổ chức hoặc định dạng, thay đổi liên tục"
+  },
+  {
+    "if": "Heuristic" ,
+    "then": "là một sự mở rộng khái niệm thuật toán"
+  },
+  {
+    "if": "Ví dụ Heuristic" ,
+    "then": " Ví dụ: Trong một bài toán tìm kiếm, khi không gian tìm kiếm lớn, tìm cách giới hạn lại không gian tìm kiếm hoặc thực hiện một kiểu dò tìm đặc biệt dựa vào đặc thù của bài toán để nhanh chóng tìm ra mục tiêu."
+  },
+  {
+    "if": {"and": ["Ví dụ", "Heuristic"] } ,
+    "then": "Ví dụ: Trong một bài toán tìm kiếm, khi không gian tìm kiếm lớn, tìm cách giới hạn lại không gian tìm kiếm hoặc thực hiện một kiểu dò tìm đặc biệt dựa vào đặc thù của bài toán để nhanh chóng tìm ra mục tiêu."
+  },
+  {
+    "if": "Giải thuật tô màu tối ưu" ,
+    "then": "Bước 1"
+  },
+  {
+    "if": {"and": ["Bước 1", "Giải thuật tô màu tối ưu"] } ,
+    "then": "Tô màu i (i bắt đầu xét từ 1) cho đỉnh có bậc lớn nhất"
+  },
+  {
+    "if": "Giải thuật tô màu tối ưu" ,
+    "then": "Bước 2"
+  },
+  {
+    "if": {"and": ["Bước 1","Bước 2", "Giải thuật tô màu tối ưu"] } ,
+    "then": "Bậc của đỉnh được tô màu i thì bậc:=0, Bậc của đỉnh có quan hệ với đỉnh được tô màu i thì bậc:= bâc– 1,Cấm tô màu i cho đỉnh có quan hệ với đỉnh được tô àu i"
+  },
+  {
+    "if": "Giải thuật tô màu tối ưu" ,
+    "then": "Bước 3"
+  },
+  {
+    "if": {"and": ["Bước 1","Bước 2","Bước 3", "Giải thuật tô màu tối ưu"] } ,
+    "then": "Lặp lại bước 1 cho đến khi tất cả các đỉnh đều được màu"
+  },
+
+  {
+    "if": "Đồ thị",
+    "then": "Khái niệm cơ bản: Đỉnh, Cung, Ma trận kề, Bậc"
+  },
+
+  {
+    "if": { "and": ["Ma trận khoảng cách", "Ngưỡng (threshold)"] },
+    "then": "Xây dựng đồ thị bằng cách nối hai đỉnh nếu khoảng cách ≥ ngưỡng"
+  },
+
+  {
+    "if": { "and": ["Bài toán sắp lịch / phân slot", "Ràng buộc không trùng thời điểm"] },
+    "then": "Mô hình hóa bài toán thành Tô màu đồ thị (Graph Coloring)"
+  },
+
+  {
+    "if": "Tô màu đồ thị",
+    "then": "Các khái niệm: Màu, Xung đột (các đỉnh kề không được cùng màu), Số màu tối thiểu (chromatic number)"
+  },
+
+  {
+    "if": { "and": ["Tô màu đồ thị", "Yêu cầu số màu tối thiểu"] },
+    "then": "Bài toán NP-khó; cần heuristic hoặc thuật toán tìm kiếm như backtracking hoặc branch-and-bound"
+  },
+
+  {
+    "if": "Thuật tối ưu",
+    "then": 
+      "Chọn đỉnh có bậc lớn nhất -> tô màu cho đỉnh được chọn -> Cập nhật bậc và cấm màu cho các đỉnh kề -> Lặp lại đến khi không còn đỉnh chưa tô"
+  },
+
+  {
+    "if": { "and": ["Thuật tối ưu", "Đỉnh được tô màu i"] },
+    "then": 
+      "Đặt bậc(đỉnh) = 0, Giảm bậc của các đỉnh kề, Cấm màu i đối với các đỉnh kề"
+  },
+
+  {
+    "if": "Giải thuật tham lam",
+    "then": "Lần lượt với i tăng dần: tô màu i cho các đỉnh chưa tô và không kề nhau; lặp đến khi mọi đỉnh đều được tô"
+  },
+
+  {
+    "if": { "and": ["Giải thuật tham lam", "Sắp thứ tự theo bậc giảm"] },
+    "then": "Greedy + Degree Ordering: sắp đỉnh theo bậc giảm giúp giảm số màu cần dùng so với Greedy thông thường"
+  },
+
+  {
+    "if": "Ma trận kề (adjacency matrix)",
+    "then": "Tính bậc bằng tổng dòng hoặc tổng cột; sử dụng để sắp thứ tự đỉnh khi áp dụng heuristic"
+  },
+
+  {
+    "if": { "and": ["Tô màu đồ thị", "Muốn biểu diễn như bài toán ràng buộc"] },
+    "then": "Chuyển thành bài toán CSP: Biến = đỉnh; Miền = tập màu; Ràng buộc = hai đỉnh kề không được cùng màu"
+  },
+
+  {
+    "if": { "and": ["CSP", "Có heuristic"] },
+    "then": "Áp dụng các heuristic như MRV hoặc Degree để giảm kích thước không gian tìm kiếm"
+  },
+
+  {
+    "if": { "and": ["Mạng ngữ nghĩa", "Quan hệ IS-A / phân cấp"] },
+    "then": [
+      "Thừa kế thuộc tính (inheritance), Suy luận phân cấp (top-down hoặc bottom-up)"
+    ]
+  },
+
+  {
+    "if": { "and": ["Hệ luật có nhiều cấp" ," luật chuyên biệt", "Mạng ngữ nghĩa"] },
+    "then": "Cần cơ chế giải quyết xung đột (conflict resolution) và ưu tiên luật"
+  },
+
+  {
+    "if": { "and": ["Bài toán tô màu lớn", "Muốn giải nhanh"] },
+    "then": "Ưu tiên dùng các heuristic (greedy, ordering); nếu cần tối ưu hơn có thể kết hợp backtracking + cắt nhánh hoặc metaheuristic"
+  },
+
+  {
+    "if": "Logic mệnh đề",
+    "then": "Là phương pháp biểu diễn tri thức sử dụng các biến mệnh đề và các phép toán: Phủ định, Hội, Tuyển, Kéo theo, Tương đương để xây dựng các phát biểu đúng/sai"
+  },
+  {
+    "if": { "or": ["Quy trình INDO", "Dạng tuyển chuẩn", "CNF"] },
+    "then": "Là quy trình 4 bước biến đổi mệnh đề: I (Implication out - Loại bỏ kéo theo), N (Negative in - Đưa phủ định vào trong), D (Disjunctions out - Đưa tuyển ra ngoài hội), O (Operator out - Loại bỏ dấu hội)"
+  },
+  {
+    "if": { "and": ["Quy trình INDO", "Bước I"] },
+    "then": "Loại bỏ phép kéo theo dựa trên tương đương logic: (p -> q) tương đương với (NOT p OR q)"
+  },
+  {
+    "if": { "and": ["Quy trình INDO", "Bước N"] },
+    "then": "Sử dụng luật De Morgan để đưa dấu phủ định vào sát biến mệnh đề: NOT(p AND q) thành (NOT p OR NOT q)"
+  },
+  {
+    "if": "Thuật giải Hợp giải",
+    "then": "Phương pháp chứng minh dựa trên nguyên lý phản chứng: Thêm phủ định của kết luận vào tập giả thuyết (KB) và tìm kiếm mâu thuẫn"
+  },
+  {
+    "if": { "and": ["Thuật giải Robinson", "Quy tắc hợp giải"] },
+    "then": "Xây dựng mệnh đề mới bằng cách tuyển 2 mệnh đề trong danh sách, nếu có 2 đơn tử đối ngẫu nhau (ví dụ p và NOT p) thì loại bỏ biến đó"
+  },
+  {
+    "if": { "and": ["Thuật giải Robinson", "Điều kiện dừng"] },
+    "then": "Vấn đề được chứng minh khi trong danh sách mệnh đề xuất hiện 2 mệnh đề đối ngẫu nhau (dẫn đến mâu thuẫn/rỗng)"
+  },
+  {
+    "if": "Thuật giải Vương Hạo",
+    "then": "Sử dụng phương pháp 'chia để trị', làm việc trên hai vế: Giả thuyết (bên trái) và Kết luận (bên phải)"
+  },
+  {
+    "if": { "and": ["Thuật giải Vương Hạo", "Quy tắc thay dấu"] },
+    "then": "Nếu trong Giả thuyết có dấu Hội (AND), hoặc trong Kết luận có dấu Tuyển (OR) thì thay thành dấu phẩy (,)"
+  },
+  {
+    "if": { "and": ["Thuật giải Vương Hạo", "Quy tắc tách dòng"] },
+    "then": "Nếu trong Giả thuyết có dấu Tuyển (OR), hoặc trong Kết luận có dấu Hội (AND) thì tách dòng hiện tại thành hai dòng con"
+  },
+  {
+    "if": { "and": ["Thuật giải Vương Hạo", "Điều kiện được chứng minh"] },
+    "then": "Một dòng được chứng minh nếu tồn tại chung một mệnh đề ở cả hai vế (Giả thuyết và Kết luận)"
+  },
+  {
+    "if": "Mạng ngữ nghĩa",
+    "then": "Phương pháp biểu diễn tri thức bằng đồ thị, gồm các đối tượng (Đỉnh) và mối liên hệ (Cung), thường dùng để giải bài toán tính toán (ví dụ: tam giác)"
+  },
+  {
+"if": { "and": ["Mạng ngữ nghĩa", "Thành phần cấu tạo"] },
+    "then": "Gồm Đỉnh hình tròn (chứa biến/yếu tố), Đỉnh hình chữ nhật (chứa công thức) và Cung (nối giữa đỉnh tròn và đỉnh chữ nhật)"
+  },
+  {
+    "if": { "and": ["Mạng ngữ nghĩa", "Cơ chế suy diễn"] },
+    "then": "Kích hoạt các biến ban đầu, truyền động theo cung. Đỉnh hình chữ nhật (công thức) được kích hoạt khi có n-1 cung liên hệ được kích hoạt"
   }
 ]
+
